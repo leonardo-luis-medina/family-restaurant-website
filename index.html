@@ -3,16 +3,271 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Family Restaurant</title>
+  <title>Verde — Filipino Kitchen, Tanauan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <h1>Welcome to Our Family Restaurant</h1>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__logo-leaf">🌿</span>
+      <span>Verde</span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#location">Find Us</a></li>
+      <li><a href="#contact" class="nav__cta">Contact</a></li>
+    </ul>
+    <button class="nav__burger" id="burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-  <p>
-    Delicious food. Warm family atmosphere.
-  </p>
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="closeMenu">✕</button>
+    <ul>
+      <li><a href="#about" class="mm-link">About</a></li>
+      <li><a href="#menu" class="mm-link">Menu</a></li>
+      <li><a href="#gallery" class="mm-link">Gallery</a></li>
+      <li><a href="#location" class="mm-link">Find Us</a></li>
+      <li><a href="#contact" class="mm-link">Contact</a></li>
+    </ul>
+  </div>
 
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__grain"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Filipino Kitchen · Tanauan, Batangas</p>
+      <h1 class="hero__title">
+        Simple, Honest<br />
+        <em>Food That Feels</em><br />
+        Like Home.
+      </h1>
+      <p class="hero__sub">Quality ingredients. Beloved local dishes. Made with heart. 🌿</p>
+      <div class="hero__actions">
+        <a href="#menu" class="btn btn--primary">Explore the Menu</a>
+        <a href="#location" class="btn btn--ghost">Find Us</a>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__text">
+          <span class="label">Our Story</span>
+          <h2 class="section-title">A Small Restaurant<br />with a Big Heart</h2>
+          <p>Verde is a small local restaurant in Poblacion 1, Tanauan, Batangas, dedicated to serving well-loved Filipino dishes made with quality ingredients and genuine care.</p>
+          <p>Every plate that leaves our kitchen carries the warmth of home — familiar flavors cooked the right way, for the people we love to feed.</p>
+          <div class="about__pillars">
+            <div class="pillar">
+              <span class="pillar__icon">🌿</span>
+              <span>Fresh Ingredients</span>
+            </div>
+            <div class="pillar">
+              <span class="pillar__icon">🍽️</span>
+              <span>Filipino Classics</span>
+            </div>
+            <div class="pillar">
+              <span class="pillar__icon">❤️</span>
+              <span>Made with Heart</span>
+            </div>
+          </div>
+        </div>
+        <div class="about__visual">
+          <div class="about__card about__card--large">
+            <div class="about__img-placeholder">
+              <span>🌿</span>
+              <p>Add your restaurant photo here</p>
+            </div>
+          </div>
+          <div class="about__badge">
+            <span class="badge-text">Est.</span>
+            <span class="badge-year">2025</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOURS BAND -->
+  <div class="hours-band">
+    <div class="hours-band__inner">
+      <div class="hours-item">
+        <span class="hours-item__label">Mon – Sat</span>
+        <span class="hours-item__time">8:00 AM – 9:00 PM</span>
+      </div>
+      <div class="hours-divider">·</div>
+      <div class="hours-item">
+        <span class="hours-item__label">Sunday</span>
+        <span class="hours-item__time">Closed</span>
+      </div>
+      <div class="hours-divider">·</div>
+      <div class="hours-item">
+        <span class="hours-item__label">Phone</span>
+        <span class="hours-item__time">0948 584 6323</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MENU -->
+  <section class="menu section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">What We Serve</span>
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-sub">Beloved Filipino dishes, made fresh every day.</p>
+      </div>
+
+      <div class="menu__tabs">
+        <button class="menu__tab active" data-tab="all">All</button>
+        <button class="menu__tab" data-tab="mains">Mains</button>
+        <button class="menu__tab" data-tab="silog">Silog &amp; Rice</button>
+        <button class="menu__tab" data-tab="appetizers">Appetizers</button>
+        <button class="menu__tab" data-tab="drinks">Drinks</button>
+      </div>
+
+      <div class="menu__grid" id="menuGrid">
+        <!-- Items are injected by JS -->
+      </div>
+
+      <p class="menu__note">✦ Menu items may change based on availability. Ask us what's fresh today!</p>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Gallery</span>
+        <h2 class="section-title">A Feast for the Eyes</h2>
+        <p class="section-sub">Replace these placeholders with your food photos — just swap the <code>src</code> in <code>script.js</code>!</p>
+      </div>
+      <div class="gallery__grid" id="galleryGrid">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="location section" id="location">
+    <div class="container">
+      <div class="section-header">
+        <span class="label">Find Us</span>
+        <h2 class="section-title">Come Visit Verde</h2>
+      </div>
+      <div class="location__grid">
+        <div class="location__info">
+          <div class="loc-item">
+            <div class="loc-item__icon">📍</div>
+            <div>
+              <h4>Address</h4>
+              <p>Poblacion 1, Tanauan<br />Batangas, Philippines 4232</p>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-item__icon">🕐</div>
+            <div>
+              <h4>Hours</h4>
+              <p>Monday – Saturday: 8:00 AM – 9:00 PM<br /><span class="closed">Sunday: Closed</span></p>
+            </div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-item__icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:09485846323">0948 584 6323</a></p>
+            </div>
+          </div>
+          <a href="https://maps.google.com/?q=14.088719,121.150919" target="_blank" class="btn btn--primary btn--full">Open in Google Maps ↗</a>
+        </div>
+        <div class="location__map">
+          <iframe
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY&q=14.088719,121.150919&zoom=16"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Verde Restaurant Location">
+          </iframe>
+          <!-- Fallback static map -->
+          <div class="map-fallback" id="mapFallback">
+            <div class="map-pin">📍</div>
+            <p>Poblacion 1, Tanauan, Batangas</p>
+            <a href="https://maps.google.com/?q=14.088719,121.150919" target="_blank" class="btn btn--primary">View on Google Maps ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact__inner">
+        <div class="section-header">
+          <span class="label">Get in Touch</span>
+          <h2 class="section-title">We'd Love to<br />Hear From You</h2>
+        </div>
+        <div class="contact__cards">
+          <a href="tel:09485846323" class="contact-card">
+            <span class="contact-card__icon">📞</span>
+            <h4>Call Us</h4>
+            <p>0948 584 6323</p>
+          </a>
+          <a href="https://www.facebook.com/messages/t/61575734294008/" target="_blank" class="contact-card">
+            <span class="contact-card__icon">💬</span>
+            <h4>Message on Facebook</h4>
+            <p>Verde on Messenger</p>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61575734294008" target="_blank" class="contact-card">
+            <span class="contact-card__icon">📘</span>
+            <h4>Follow Us</h4>
+            <p>@Verde on Facebook</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <span class="footer__logo">🌿 Verde</span>
+          <p>Simple, honest food that feels like home.</p>
+        </div>
+        <div class="footer__links">
+          <a href="#about">About</a>
+          <a href="#menu">Menu</a>
+          <a href="#gallery">Gallery</a>
+          <a href="#location">Find Us</a>
+          <a href="https://www.facebook.com/profile.php?id=61575734294008" target="_blank">Facebook</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 Verde Restaurant · Poblacion 1, Tanauan, Batangas · All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
